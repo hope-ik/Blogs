@@ -7,6 +7,11 @@
     .container;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .preloader {
     position: fixed;
     width: 100%;
@@ -25,7 +30,8 @@
     margin-top: -50px;
 }
 
-#part1 {
+#part1,
+#part2 {
     background-size: cover;
 }
 
@@ -101,6 +107,28 @@
     }
 }
 
+.navigation {
+    height: 80px;
+    width: 100%;
+    background-color: #000000db;
+    position: sticky;
+    top: 0;
+
+    ul {
+        list-style: none;
+
+        li {
+            color: white;
+            float: left;
+            font-weight: 900;
+            text-align: center;
+            width: 24%;
+            height: 100%;
+            margin: 30px 0px;
+        }
+    }
+}
+
 .part {
     overflow: hidden;
     padding: 100px 0;
@@ -153,7 +181,7 @@
 
                 a:hover {
                     background: #f69f63;
-                    color: #111;
+                    color: white;
                     box-shadow: 0 0 50 #f69f63;
                     transition-delay: .5s;
                 }
@@ -234,20 +262,105 @@
             margin: 0 auto;
             padding-top: .1px;
             font-family: "Microsoft YaHei";
-        }
 
-        @media screen and(min-width: 1200px) {
-            .page2 {
-                width: 1170px;
+            .container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                .title {
+                    text-align: center;
+
+                    .inner {
+                        display: inline-block;
+                        vertical-align: middle;
+
+                        h1 {
+                            font-size: 32px;
+                            font-weight: 500;
+                            padding-bottom: 25px;
+                            position: relative;
+                        }
+
+                        h1:after {
+                            position: absolute;
+                            content: '';
+                            background: #f69f63;
+                            width: 50px;
+                            height: 2px;
+                            left: 50%;
+                            margin-left: -25px;
+                            bottom: -1px;
+                        }
+
+                        p {
+                            margin-top: 20px;
+                            line-height: 22px;
+                            color: #888;
+                        }
+                    }
+
+                }
+
             }
-        }
 
-
-        @media screen and (min-width: 992px) {
-            .page2 {
-                width: 970px;
+            .debris-row::before {
+                content: '';
+                display: block;
+                clear: both;
             }
+
+            .debris-row {
+                .col-sm4 {
+                    float: left;
+                    width: 30%;
+                }
+                .col {
+                    padding: 0 10px;
+                    visibility: visible;
+                    animation-name: fadeInUp;
+                    display: flex;
+                    flex-direction: column;
+
+                    
+
+                    .single {
+                        margin-top: 50px;
+                        background: #faf9f9;
+                        
+
+                        .head {
+                            position: relative;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: 244px;
+                                -webkit-transition: all .4s ease;
+                                -moz-transition: all .4s ease;
+                                transition: all .4s ease;
+                            }
+                        }
+                    }
+                }
+            }
+
+
         }
+
+        // @media screen and(min-width: 1200px) {
+        //     .page2 {
+        //         width: 1170px;
+        //     }
+        // }
+
+
+        // @media screen and (min-width: 992px) {
+        //     .page2 {
+        //         width: 970px;
+        //     }
+        // }
+
 
     }
 }
