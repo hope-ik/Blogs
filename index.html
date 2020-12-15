@@ -10,7 +10,8 @@
     <title>Hope的个人网站</title>
     <link rel="ICON" href="logo.png">
     <link rel="SHORTCUT ICON" href="logo.png">
-    <link rel="stylesheet" href="./css/animate.min.css">
+    <!-- <link rel="stylesheet" href="./css/animate.min.css"> -->
+    <link rel="stylesheet" href="./css/iconfont.css">
     <link rel="stylesheet" href="./css/home.css" rel="stylesheet">
 
     <!--loading style-->
@@ -73,48 +74,87 @@
             <div class="page2">
                 <div class="container">
                     <div class="title">
-                        <div class="inner wow fadeInDown" data-wow-delay=".2s"
-                            style="visibility: visible; animation-delay: .2s;animation-duration: 2s;  animation-name: fadeInDown;">
-                            <h1>热门文章</h1>
-                            <p>
-                                很想给你写封信,告诉你这里的天气.
+                        <div class="inner">
+                            <h1 data-scroll-reveal="enter top after 0.1s">About Me</h1>
+                            <h2 data-scroll-reveal="enter top after 0.1s">关于·我</h2>
+                            <hr class="line" data-scroll-reveal="enter left after 0.1s" />
+                            <p data-scroll-reveal="enter top after .1s">
+                                热衷于新技术的学习和探讨，热衷页面布局。崇尚化繁为简理念
                                 <br />
-                                昨夜的那场电影,还有我的心情.
+                                对互联网发展趋势高兴趣关注，积极配合开发同事完成工作
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="debris-row">
-                    <div class="col col-sm4">
-                        <div class="single">
-                            <div class="head">
-                                <img src="./images/20201029171456922.jpg" alt="">
+                <ul class="skill-list" id="skill-list">
+                    <li data-percent="87" data-scroll-reveal="enter top after .3s">
+                        <div class="skill-item">
+                            <div class="skill-inscir">
+                                <span class="skill-text1 kind"></span>
+                                <span class="skill-per"></span>
                             </div>
+                            <div class="skill-img" style="bottom:-100px"></div>
                         </div>
-                        
-                    </div>
+                        <p class="skill-title">Photoshop</p>
+                    </li>
 
-                    <div class="col col-sm4">
-                        <div class="single">
-                            <div class="head">
-                                <img src="./images/20201029171456922.jpg" alt="">
+                    <li data-percent="96" data-scroll-reveal="enter top after .4s">
+                        <div class="skill-item">
+                            <div class="skill-inscir">
+                                <span class="skill-text2 kind"></span>
+                                <span class="skill-per"></span>
                             </div>
+                            <div class="skill-img" style="bottom:-100px"></div>
                         </div>
-                        
-                    </div>
+                        <p class="skill-title">html+css3</p>
+                    </li>
 
-                    <div class="col col-sm4">
-                        <div class="single">
-                            <div class="head">
-                                <img src="./images/20201029171456922.jpg" alt="">
+                    <li data-percent="68" data-scroll-reveal="enter top after .5s">
+                        <div class="skill-item">
+                            <div class="skill-inscir">
+                                <span class="skill-text3 kind"></span>
+                                <span class="skill-per"></span>
                             </div>
+                            <div class="skill-img" style="bottom:-100px"></div>
                         </div>
-                        
-                    </div>
-                    
-                </div>
+                        <p class="skill-title">JavaSript</p>
+                    </li>
 
+                    <li data-percent="78" data-scroll-reveal="enter top after .7s">
+                        <div class="skill-item">
+                            <div class="skill-inscir">
+                                <span class="skill-text4 kind"></span>
+                                <span class="skill-per"></span>
+                            </div>
+                            <div class="skill-img" style="bottom:-100px"></div>
+                        </div>
+                        <p class="skill-title">jquery</p>
+                    </li>
+
+                    <li data-percent="93" data-scroll-reveal="enter top after .6s">
+                        <div class="skill-item">
+                            <div class="skill-inscir ">
+                                <span class="skill-text5 kind"></span>
+                                <span class="skill-per"></span>
+                            </div>
+                            <div class="skill-img" style="bottom:-100px"></div>
+                        </div>
+                        <p class="skill-title">Bootstrap</p>
+                    </li>
+
+                    <li data-percent="88" data-scroll-reveal="enter top after .7s">
+                        <div class="skill-item">
+                            <div class="skill-inscir">
+                                <span class="skill-text6 kind"></span>
+                                <span class="skill-per"></span>
+                            </div>
+                            <div class="skill-img" style="bottom:-100px"></div>
+                        </div>
+                        <p class="skill-title">Vue</p>
+                    </li>
+                </ul>
+                <a class="button" data-scroll-reveal="enter top after .6s" data-scroll-reveal-initialized="true"></a>
 
             </div>
         </div>
@@ -122,9 +162,15 @@
 
 
 </body>
+<!-- JavaSript脚本 -->
 <script src="./js/jquery-3.5.1.min.js"></script>
+<!-- Swiper JS -->
 <script src="./js/swiper-bundle.min.js"></script>
-<script src="./js/wow.min.js"></script>
+<!-- 更改滚动条 -->
+<script src="./js/jquery.nicescroll.js"></script>
+<!-- <script src="./js/wow.min.js"></script> wow 依赖animate.css -->
+<!--scrollReveal和wow一样也是页面滚动动画，但是不依赖其他任何文件,可以播放一次或无数次!  -->
+<script src="http://cdn.dowebok.com/134/js/scrollReveal.js"></script>
 <script src="./js/home.js"></script>
 
 </html>

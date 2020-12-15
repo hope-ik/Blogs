@@ -6,6 +6,22 @@
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s !important;
+}
+.skill-text {
+  width: 45px;
+  height: 45px;
+  background-size: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
 .preloader {
   position: fixed;
   width: 100%;
@@ -22,7 +38,8 @@
   top: 50%;
   margin-top: -50px;
 }
-#part1 {
+#part1,
+#part2 {
   background-size: cover;
 }
 #part1 {
@@ -35,7 +52,7 @@
   padding: 0;
 }
 .menu-open:hover {
-  background: #f69f63;
+  background: #f97352;
 }
 .menu-open:first-child {
   margin-top: 12px;
@@ -55,7 +72,7 @@
   height: 40px;
   border-radius: 50%;
   right: 55px;
-  top: 40px;
+  top: 15px;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -87,6 +104,26 @@
   margin-left: -50px;
   top: 50%;
   margin-top: -50px;
+}
+.navigation {
+  height: 65px;
+  width: 100%;
+  line-height: 10px;
+  background-color: #000000db;
+  position: sticky;
+  top: 0;
+}
+.navigation ul {
+  list-style: none;
+}
+.navigation ul li {
+  color: white;
+  float: left;
+  font-weight: 900;
+  text-align: center;
+  width: 24%;
+  height: 100%;
+  margin: 30px 0px;
 }
 .part {
   overflow: hidden;
@@ -120,7 +157,7 @@
 .part .pa-tablecell .page .nav a {
   margin: 0 auto;
   text-decoration: none;
-  color: #f69f63;
+  color: #f97352;
   font-size: 20px;
   padding: 5px 15px;
   position: relative;
@@ -135,9 +172,9 @@
   -webkit-box-reflect: below 1px linear-gradient(#607d8b17, #0003);
 }
 .part .pa-tablecell .page .nav a:hover {
-  background: #f69f63;
-  color: #111;
-  box-shadow: 0 0 50 #f69f63;
+  background: #f97352;
+  color: white;
+  box-shadow: 0 0 50 #f97352;
   transition-delay: 0.5s;
 }
 .part .pa-tablecell .page .nav a:hover::before {
@@ -152,8 +189,8 @@
   left: 0;
   width: 10px;
   height: 10px;
-  border-top: 2px solid #f69f63;
-  border-left: 2px solid #f69f63;
+  border-top: 2px solid #f97352;
+  border-left: 2px solid #f97352;
   transition: 0.5s;
   transition-delay: 0.3s;
 }
@@ -169,13 +206,13 @@
   bottom: 0;
   width: 10px;
   height: 10px;
-  border-bottom: 2px solid #f69f63;
-  border-right: 2px solid #f69f63;
+  border-bottom: 2px solid #f97352;
+  border-right: 2px solid #f97352;
   transition: 0.5s;
   transition-delay: 0.3s;
 }
 .part .pa-tablecell .page .next:hover {
-  background-color: #f69f63;
+  background-color: #f97352;
 }
 .part .pa-tablecell .page .next {
   display: block;
@@ -206,13 +243,220 @@
   padding-top: 0.1px;
   font-family: "Microsoft YaHei";
 }
-@media screen and (min-width: 1200px) {
-  .part .pa-tablecell .page2 {
-    width: 1170px;
+.part .pa-tablecell .page2 .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.part .pa-tablecell .page2 .container .title {
+  text-align: center;
+}
+.part .pa-tablecell .page2 .container .title .inner {
+  display: inline-block;
+  vertical-align: middle;
+}
+.part .pa-tablecell .page2 .container .title .inner h1 {
+  font-size: 41px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  position: relative;
+  text-transform: uppercase;
+  color: #353535;
+  letter-spacing: 5px;
+}
+.part .pa-tablecell .page2 .container .title .inner h2 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 100;
+  color: #424242;
+  letter-spacing: 5px;
+}
+.part .pa-tablecell .page2 .container .title .inner .line {
+  height: 2px;
+  border: none;
+  width: 45px;
+  background: #424242;
+  display: block;
+  margin: 25px auto 45px;
+}
+.part .pa-tablecell .page2 .container .title .inner p {
+  color: #242424;
+  font-weight: lighter;
+  font-size: 14px;
+  letter-spacing: 3px;
+  line-height: 24px;
+  text-align: center;
+  padding: 0 10px;
+}
+.part .pa-tablecell .page2 .debris-row::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.part .pa-tablecell .page2 .skill-list {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: -20px;
+}
+.part .pa-tablecell .page2 .skill-list li {
+  display: inline-block;
+}
+.part .pa-tablecell .page2 .skill-list li .skill-item {
+  position: relative;
+  margin: 0 20px;
+  cursor: pointer;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px dashed #424242;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 9;
+}
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text,
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-per {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 45px;
+  height: 45px;
+  background: #616161;
+  border-radius: 50%;
+  color: #fff;
+  z-index: 2;
+  line-height: 45px;
+  opacity: 0.9;
+}
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text1,
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text2,
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text3,
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text4,
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text5,
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text6 {
+  width: 45px;
+  height: 45px;
+  background-size: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text1 {
+  background-image: url('../images/PS.png');
+}
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text2 {
+  background-image: url('../images/html.png');
+}
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text3 {
+  background-image: url('../images/js.png');
+}
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text4 {
+  background-image: url('../images/jquery.png');
+}
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text5 {
+  background-image: url('../images/bootstrap.png');
+}
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-text6 {
+  background-image: url('../images/vue.png');
+}
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-inscir .skill-per {
+  opacity: 0;
+  transform: scale(0);
+}
+.part .pa-tablecell .page2 .skill-list li .skill-item .skill-img {
+  background: url('../images/wave.png');
+  animation: bear-run 2s steps(60) 0s infinite;
+  background-size: 200%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 0;
+  bottom: -100px;
+  z-index: 1;
+  transition: all 1.5s;
+  opacity: 0.7;
+}
+@keyframes bear-run {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100px 0;
   }
 }
-@media screen and (min-width: 992px) {
-  .part .pa-tablecell .page2 {
-    width: 970px;
-  }
+.part .pa-tablecell .page2 #skill-list li:hover .skill-per {
+  opacity: 1;
+  transform: scale(1);
+}
+.part .pa-tablecell .page2 #skill-list li:hover .kind {
+  opacity: 0;
+  transform: scale(0);
+}
+.part .pa-tablecell .page2 .button {
+  display: block;
+  height: 45px;
+  width: 200px;
+  border: 1px solid #0003;
+  margin: 200px auto 100px;
+  color: #242424;
+  line-height: 45px;
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  overflow: hidden;
+}
+.part .pa-tablecell .page2 .button::before {
+  content: "我的简历";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+}
+.part .pa-tablecell .page2 .button::after {
+  font-family: "iconfont" !important;
+  content: "\e64e";
+  display: block;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  font-size: 30px;
+}
+.part .pa-tablecell .page2 .button:hover {
+  background: #424242;
+  color: white;
+  border-radius: 50px;
+}
+.part .pa-tablecell .page2 .button:hover::before {
+  top: -100%;
+}
+.part .pa-tablecell .page2 .button:hover:after {
+  top: 0;
+  opacity: 1;
 }

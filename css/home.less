@@ -10,6 +10,19 @@
 a {
     text-decoration: none;
     color: white;
+    transition: all .3s !important;
+}
+
+.skill-text {
+    width: 45px;
+    height: 45px;
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .preloader {
@@ -46,7 +59,7 @@ a {
 }
 
 .menu-open:hover {
-    background: #f69f63;
+    background: #f97352;
 
 }
 
@@ -70,7 +83,7 @@ a {
     height: 40px;
     border-radius: 50%;
     right: 55px;
-    top: 40px;
+    top: 15px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, .1);
     overflow: hidden;
@@ -108,8 +121,9 @@ a {
 }
 
 .navigation {
-    height: 80px;
+    height: 65px;
     width: 100%;
+    line-height: 10px;
     background-color: #000000db;
     position: sticky;
     top: 0;
@@ -164,7 +178,7 @@ a {
                 a {
                     margin: 0 auto;
                     text-decoration: none;
-                    color: #f69f63;
+                    color: #f97352;
                     font-size: 20px;
                     padding: 5px 15px;
                     position: relative;
@@ -180,9 +194,9 @@ a {
                 }
 
                 a:hover {
-                    background: #f69f63;
+                    background: #f97352;
                     color: white;
-                    box-shadow: 0 0 50 #f69f63;
+                    box-shadow: 0 0 50 #f97352;
                     transition-delay: .5s;
                 }
 
@@ -199,8 +213,8 @@ a {
                     left: 0;
                     width: 10px;
                     height: 10px;
-                    border-top: 2px solid #f69f63;
-                    border-left: 2px solid #f69f63;
+                    border-top: 2px solid #f97352;
+                    border-left: 2px solid #f97352;
                     transition: .5s;
                     transition-delay: .3s;
                 }
@@ -218,15 +232,15 @@ a {
                     bottom: 0;
                     width: 10px;
                     height: 10px;
-                    border-bottom: 2px solid #f69f63;
-                    border-right: 2px solid #f69f63;
+                    border-bottom: 2px solid #f97352;
+                    border-right: 2px solid #f97352;
                     transition: .5s;
                     transition-delay: .3s;
                 }
             }
 
             .next:hover {
-                background-color: #f69f63;
+                background-color: #f97352;
             }
 
             .next {
@@ -276,27 +290,43 @@ a {
                         vertical-align: middle;
 
                         h1 {
-                            font-size: 32px;
+                            font-size: 41px;
                             font-weight: 500;
-                            padding-bottom: 25px;
+                            padding-bottom: 10px;
                             position: relative;
+                            text-transform: uppercase;
+                            color: #353535;
+                            letter-spacing: 5px;
+
                         }
 
-                        h1:after {
-                            position: absolute;
-                            content: '';
-                            background: #f69f63;
-                            width: 50px;
+                        h2 {
+                            font-size: 24px;
+                            line-height: 40px;
+                            font-weight: 100;
+                            color: #424242;
+                            letter-spacing: 5px;
+                        }
+
+
+                        .line {
                             height: 2px;
-                            left: 50%;
-                            margin-left: -25px;
-                            bottom: -1px;
+                            border: none;
+                            width: 45px;
+                            background: #424242;
+                            display: block;
+                            margin: 25px auto 45px;
+
                         }
 
                         p {
-                            margin-top: 20px;
-                            line-height: 22px;
-                            color: #888;
+                            color: #242424;
+                            font-weight: lighter;
+                            font-size: 14px;
+                            letter-spacing: 3px;
+                            line-height: 24px;
+                            text-align: center;
+                            padding: 0 10px;
                         }
                     }
 
@@ -310,41 +340,191 @@ a {
                 clear: both;
             }
 
-            .debris-row {
-                .col-sm4 {
-                    float: left;
-                    width: 30%;
-                }
-                .col {
-                    padding: 0 10px;
-                    visibility: visible;
-                    animation-name: fadeInUp;
-                    display: flex;
-                    flex-direction: column;
+            .skill-list {
+                text-align: center;
+                margin-top: 50px;
+                margin-bottom: -20px;
 
-                    
+                li {
+                    display: inline-block;
 
-                    .single {
-                        margin-top: 50px;
-                        background: #faf9f9;
-                        
+                    .skill-item {
+                        position: relative;
+                        margin: 0 20px;
+                        cursor: pointer;
+                        display: inline-block;
+                        width: 100px;
+                        height: 100px;
+                        border: 1px dashed #424242;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        z-index: 9;
 
-                        .head {
-                            position: relative;
-                            overflow: hidden;
+                        .skill-inscir .skill-text,
+                        .skill-inscir .skill-per {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            margin: auto;
+                            width: 100%;
+                            height: 100%;
+                            transition: all .2s;
+                            font-size: 14px;
+                        }
 
-                            img {
-                                width: 100%;
-                                height: 244px;
-                                -webkit-transition: all .4s ease;
-                                -moz-transition: all .4s ease;
-                                transition: all .4s ease;
+                        .skill-inscir {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            border: 1px solid rgba(255, 255, 255, .4);
+                            width: 45px;
+                            height: 45px;
+                            background: #616161;
+                            border-radius: 50%;
+                            color: #fff;
+                            z-index: 2;
+                            line-height: 45px;
+                            opacity: 0.9;
+
+                            .skill-text1,
+                            .skill-text2,
+                            .skill-text3,
+                            .skill-text4,
+                            .skill-text5,
+                            .skill-text6 {
+                                .skill-text;
+                            }
+
+                            .skill-text1 {
+                                background-image: url('../images/PS.png');
+                            }
+
+                            .skill-text2 {
+                                background-image: url('../images/html.png');
+                            }
+
+                            .skill-text3 {
+                                background-image: url('../images/js.png');
+                            }
+
+                            .skill-text4 {
+                                background-image: url('../images/jquery.png');
+                            }
+
+                            .skill-text5 {
+                                background-image: url('../images/bootstrap.png');
+                            }
+
+                            .skill-text6 {
+                                background-image: url('../images/vue.png');
+                            }
+
+                            .skill-per {
+                                opacity: 0;
+                                transform: scale(0);
+                            }
+                        }
+
+                        .skill-img {
+                            background: url('../images/wave.png');
+                            // steps 第一个参数是帧数，第二个是开始时间  infinite无限循环
+                            animation: bear-run 2s steps(60) 0s infinite;
+                            background-size: 200%;
+                            position: absolute;
+                            width: 100px;
+                            height: 100px;
+                            left: 0;
+                            bottom: -100px;
+                            z-index: 1;
+                            transition: all 1.5s;
+                            opacity: .7;
+                        }
+
+                        @keyframes bear-run {
+                            0% {
+                                background-position: 0 0;
+                            }
+
+                            100% {
+                                background-position: -100px 0;
                             }
                         }
                     }
                 }
+
             }
 
+            #skill-list li:hover .skill-per {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            #skill-list li:hover .kind {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            .button {
+                display: block;
+                height: 45px;
+                width: 200px;
+                border: 1px solid #0003;
+                margin: 200px auto 100px;
+                color: #242424;
+                line-height: 45px;
+                position: relative;
+                text-align: center;
+                font-size: 16px;
+                overflow: hidden;
+            }
+
+            .button::before {
+                content: "我的简历";
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                transition: all .3s;
+            }
+
+            .button::after {
+                font-family: "iconfont" !important;
+                content: "\e64e";
+                display: block;
+                position: absolute;
+                top: -100%;
+                left: 0;
+                opacity: 0;
+                color: white;
+                font-size: 20px;
+                width: 100%;
+                height: 100%;
+                transition: all .3s;
+                font-size: 30px;
+            }
+
+            .button:hover {
+                background: rgba(66, 66, 66, 1);
+                color: white;
+                border-radius: 50px;
+            }
+
+            .button:hover::before {
+                top: -100%;
+
+            }
+
+            .button:hover:after {
+                top: 0;
+                opacity: 1;
+            }
 
         }
 
