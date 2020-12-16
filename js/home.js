@@ -65,9 +65,7 @@ $(function () {
 })
 
 //scrollReveal
-$(function () {
-    window.scrollReveal = new scrollReveal({ reset: true, move: "100px" });
-})
+window.scrollReveal = new scrollReveal({ reset: true, move: "100px" });
 
 //技能列表
 
