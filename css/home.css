@@ -163,7 +163,7 @@ a {
   position: relative;
   top: 25px;
   text-transform: uppercase;
-  transition: 0.5s;
+  transition: 1s !important;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
