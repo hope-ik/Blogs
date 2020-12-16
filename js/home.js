@@ -4,6 +4,11 @@
 //   siteWelcome.classList.remove("active");
 // };
 
+// loading
+window.onload = function () {
+    $(".preloader").delay(1000).fadeOut("slow"); //一秒后缓慢隐没
+}
+
 // // Menu Scroll to content and Active menu
 
 // $("a[href*=#]").bind("click", function (e) {
@@ -17,7 +22,7 @@
 
 // // 技能列表
 var progress = 0;
-$(".skill-list li").on("mouseenter", function () {
+$(".skill-list li").on("mouseenter", function () {//鼠标移入事件
     let val = $(this).attr("data-percent");//当前属性为data-percent的值赋值给val
     $(this)
         .children(".skill-item")
@@ -57,14 +62,7 @@ $("#skill-list li").on("mouseleave", function () {
 // });
 $(function () {
     new WOW().init();//初始化wow.js
-
-
 })
-
-// loading
-window.onload = function () {
-    $(".preloader").delay(1000).fadeOut("slow"); //一秒后缓慢隐没
-}
 
 //scrollReveal
 $(function () {
