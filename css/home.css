@@ -11,6 +11,32 @@ a {
   color: white;
   transition: all 0.3s !important;
 }
+ul {
+  list-style: none;
+}
+.button {
+  display: block;
+  height: 45px;
+  width: 200px;
+  border: 1px solid #0003;
+  margin: 200px auto 100px;
+  color: #242424;
+  line-height: 45px;
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.button-before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+}
 .skill-text {
   width: 45px;
   height: 45px;
@@ -39,7 +65,7 @@ a {
   margin-top: -50px;
 }
 #part1,
-#part2 {
+#about {
   background-size: cover;
 }
 #part1 {
@@ -71,12 +97,13 @@ a {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  right: 55px;
-  top: 15px;
+  right: 12%;
+  top: 5px;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  z-index: 102;
+  z-index: 980;
+  transition: all 1s;
 }
 .menu-open span {
   display: block;
@@ -106,24 +133,29 @@ a {
   margin-top: -50px;
 }
 .navigation {
-  height: 65px;
+  height: 50px;
   width: 100%;
   line-height: 10px;
   background-color: #000000db;
   position: sticky;
   top: 0;
+  z-index: 800;
 }
 .navigation ul {
-  list-style: none;
+  right: 15%;
+  position: absolute;
 }
 .navigation ul li {
   color: white;
   float: left;
   font-weight: 900;
   text-align: center;
-  width: 24%;
   height: 100%;
-  margin: 30px 0px;
+  margin: 20px 20px;
+}
+#case {
+  background: #f7f7f7;
+  overflow: hidden;
 }
 .part {
   overflow: hidden;
@@ -211,8 +243,14 @@ a {
   transition: 0.5s;
   transition-delay: 0.3s;
 }
-.part .pa-tablecell .page .next:hover {
-  background-color: #f97352;
+@keyframes Vertical {
+  0% {
+    bottom: 60px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 10px;
+  }
 }
 .part .pa-tablecell .page .next {
   display: block;
@@ -220,7 +258,7 @@ a {
   height: 45px;
   border-radius: 50%;
   position: absolute;
-  bottom: 30px;
+  bottom: 60px;
   left: 50%;
   margin-left: -25px !important;
   z-index: 0;
@@ -228,6 +266,7 @@ a {
   transition: all 0.5s ease-out;
   cursor: pointer;
   text-align: center;
+  animation: Vertical 1.4s infinite;
 }
 .part .pa-tablecell .page .next img {
   width: 35px;
@@ -235,6 +274,16 @@ a {
   position: relative;
   top: 3px;
   right: 1px;
+}
+.part .pa-tablecell .page .next::after {
+  font-family: "iconfont" !important;
+  content: "\e606";
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-size: 45px;
+  display: block;
+  position: absolute;
 }
 .part .pa-tablecell .page2 {
   width: 90%;
@@ -422,6 +471,7 @@ a {
   text-align: center;
   font-size: 16px;
   overflow: hidden;
+  cursor: pointer;
 }
 .part .pa-tablecell .page2 .button::before {
   content: "我的简历";
@@ -459,4 +509,106 @@ a {
 .part .pa-tablecell .page2 .button:hover:after {
   top: 0;
   opacity: 1;
+}
+.part .pa-tablecell .works-list-tab {
+  text-align: center;
+  margin-top: 60px;
+  display: inline-block;
+  font-size: 0;
+  width: 100%;
+}
+.part .pa-tablecell .works-list-tab ul {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50px;
+  border: solid 1px #666;
+}
+.part .pa-tablecell .works-list-tab ul .act {
+  color: white;
+  background: #666;
+}
+.part .pa-tablecell .works-list-tab ul li {
+  display: inline-block;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  border-right: solid 1px #666;
+  font-weight: 300;
+  padding: 8px 30px;
+  transition: all 0.4s;
+}
+.part .pa-tablecell .works-list-tab ul li:hover {
+  color: white;
+  background: #a3a3a3;
+}
+.part .pa-tablecell .works-list {
+  overflow: hidden;
+  transition: all 1s;
+  text-align: center;
+  font-size: 0;
+  margin-top: 36px;
+}
+.part .pa-tablecell .works-list li {
+  position: relative;
+  display: inline-block;
+  width: 16.66666%;
+  overflow: hidden;
+  transition: all 1.1s;
+}
+.part .pa-tablecell .works-list li img {
+  transition: all 1s;
+  width: 100%;
+  display: block;
+}
+.part .pa-tablecell .works-list li .works-list-title {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transition: all 0.5s ease-in;
+}
+.part .pa-tablecell .works-list li .works-list-title p {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 50%;
+  line-height: 2px;
+}
+.part .pa-tablecell .works-list li:hover .works-list-title {
+  width: 200%;
+  height: 200%;
+  opacity: 1;
+  z-index: 1;
+  top: -50%;
+  left: -50%;
+}
+.part .pa-tablecell .works-list li:hover img {
+  transform: scale(1.5);
+}
+.part .pa-tablecell #button2::before {
+  content: "More";
+}
+.advantage {
+  overflow: hidden;
+  z-index: 99;
+  background: white;
+  position: relative;
+}
+.advantage .adv-title {
+  padding: 60px 0;
+  text-align: center;
+  color: white;
+  background: #333;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 48px;
+}
+.advantage p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 100;
+  line-height: 28px;
 }

@@ -5,7 +5,10 @@
 //   var siteWelcome = document.getElementById("siteWelcome");
 //   siteWelcome.classList.remove("active");
 // };
-// // Menu Scroll to content and Active menu
+// loading
+window.onload = function () {
+  $(".preloader").delay(1000).fadeOut("slow"); //一秒后缓慢隐没
+}; // // Menu Scroll to content and Active menu
 // $("a[href*=#]").bind("click", function (e) {
 //   e.preventDefault();
 //   var target = $(this).attr("href");
@@ -14,9 +17,37 @@
 //     .animate({ scrollTop: $(target).offset().top - 140 }, 1000, function () {});
 //   return false;
 // });
-// // 技能列表
+// $("a[href*=#]").bind("click", function (e) {
+//     e.preventDefault();//取消事件默认行为
+//     console.log(e)
+// })
+// $(function () {
+//     
+// })
+// window.onscroll = function (e) {
+//     if (scrol >= 981) {
+//         console.log(1)
+//     } else {
+//         console.log(8)
+//     }
+// }
+//menu 
+
+
+window.onscroll = function (e) {
+  var scrol = document.documentElement.scrollTop;
+
+  if (scrol >= 981) {
+    $("#menu").css("display", "block");
+  } else {
+    $("#menu").css("display", "none");
+  }
+}; // // 技能列表
+
+
 var progress = 0;
 $(".skill-list li").on("mouseenter", function () {
+  //鼠标移入事件
   var val = $(this).attr("data-percent"); //当前属性为data-percent的值赋值给val
 
   $(this).children(".skill-item").children(".skill-img").css('bottom', -(100 - val) + '%'); //根据用户给定的值改变css高度
@@ -39,34 +70,27 @@ $("#skill-list li").on("mouseleave", function () {
   $('.skill-img').css("bottom", "-100px");
   progress = 0;
   $(".skill-inscir .skill-per").html(progress + "%");
-}); // $(".skill-list li").on("mouseleave", function () {
-//     $(".skill-img").css("bottom", "-100px");
-//     progress = 0;
-//     $(".skill-inscir .skill-per").html(progress + "%");
-// });
-// //工作案例切换
-// $(".works-list-tab li").on("click", function () {
-//   $(this).addClass("act").siblings().removeClass("act");
-//   $(".works .works-list").fadeOut("fast");
-//   $(".works .works-list").eq($(this).index()).fadeIn("fast");
-// });
-
+});
 $(function () {
   new WOW().init(); //初始化wow.js
-}); // loading
-
-window.onload = function () {
-  $(".preloader").delay(1000).fadeOut("slow"); //一秒后缓慢隐没
-}; //scrollReveal
-
+}); //scrollReveal
 
 $(function () {
-  window.scrollReveal = new scrollReveal({
+  var config = {
     reset: true,
     move: "100px"
-  });
-}); //技能列表
-// // niceScroll 滚动条
+  };
+  window.scrollReveal = new scrollReveal(config); // console.log(window.scrollReveal)
+}); //工作案例切换
+
+$('.works-list-tab li').click(function () {
+  //siblings() 方法返回被选元素的所有同级元素。
+  $(this).addClass('act').siblings().removeClass('act'); //使用fadeout隐藏一组工作案例
+
+  $("#case .works-list").fadeOut("fast"); //使用eq选择器选中当前点击的一组工作案例，使用fadeIn显示
+
+  $("#case .works-list").eq($(this).index()).fadeIn("fast");
+}); // // niceScroll 滚动条
 
 $(function () {
   $('html').niceScroll({

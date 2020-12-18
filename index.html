@@ -10,7 +10,7 @@
     <title>Hope的个人网站</title>
     <link rel="ICON" href="logo.png">
     <link rel="SHORTCUT ICON" href="logo.png">
-    <!-- <link rel="stylesheet" href="./css/animate.min.css"> -->
+    <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/iconfont.css">
     <link rel="stylesheet" href="./css/home.css" rel="stylesheet">
 
@@ -30,7 +30,7 @@
     </div>
 
     <div id="menu" class="menu-open animate fadeInRight"
-        style="visibility: visible; animation-duration: 2s; animation-name: fadeInRight;">
+        style="visibility: visible; animation-duration: 2s; animation-name: fadeInRight; display: none;">
         <span></span>
         <span></span>
         <span></span>
@@ -42,34 +42,38 @@
                 <div class="nav wow animated">
                     <h1>H&nbsp;o&nbsp;p&nbsp;e</h1>
                     <p>&nbsp;&nbsp;慢品人间烟火色，闲观万事岁月长</p>
+                    <p>&nbsp;&nbsp;许你晚风凉，与光同成灰✨</p>
+
                     <a href="#">Enter blog</a>
                 </div>
-                <a href="" class="next fadeInUp animated"
-                    style="visibility: visible; animation-duration: 2s; animation-name: fadeInUp;">
-                    <img src="images/next.png" alt=""></a>
+                <a href="#about" class="next" alt="向下滑动">
+                    <!-- <img src="images/next.png" alt=""> -->
+                </a>
             </div>
         </div>
     </div>
 
     <div class="navigation">
         <ul>
-            <li>
-                <a href="#">首页</a>
+            <li data-scroll-reveal="enter left after 2s">
+                <a href="#">博客</a>
             </li>
-            <li>
-                <a href="#">首页</a>
-
+            <li data-scroll-reveal="enter left after 2s">
+                <a href="#">简历</a>
             </li>
-            <li>
-                <a href="#">首页</a>
+            <li data-scroll-reveal="enter left after 2s">
+                <a href="#about">关于</a>
             </li>
-            <li>
-                <a href="#">首页</a>
+            <li data-scroll-reveal="enter left after 2s">
+                <a href="#case">案例</a>
+            </li>
+            <li data-scroll-reveal="enter left after 2s">
+                <a href="#">联系</a>
             </li>
         </ul>
     </div>
 
-    <div class="part" id="part2">
+    <article class="part" id="about">
         <div class="pa-tablecell">
             <div class="page2">
                 <div class="container">
@@ -154,11 +158,218 @@
                         <p class="skill-title">Vue</p>
                     </li>
                 </ul>
-                <a class="button" data-scroll-reveal="enter top after .6s" data-scroll-reveal-initialized="true"></a>
+                <a class="button" data-scroll-reveal="enter top after 1s" data-scroll-reveal-initialized="true"></a>
 
             </div>
         </div>
-    </div>
+    </article>
+
+    <article class="part" id="case">
+        <div class="pa-tablecell">
+            <div class="page2">
+                <div class="container">
+                    <div class="title">
+                        <div class="inner">
+                            <h1 data-scroll-reveal="enter top after 0.1s">my works</h1>
+                            <h2 data-scroll-reveal="enter top after 0.1s">精选·案例</h2>
+                            <hr class="line" data-scroll-reveal="enter left after 0.1s" />
+                            <p data-scroll-reveal="enter top after .1s">
+                                热衷于新技术的学习和探讨，热衷页面布局。崇尚化繁为简理念
+                                <br />
+                                对互联网发展趋势高兴趣关注，积极配合开发同事完成工作
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="works-list-tab">
+                    <ul>
+                        <li class="act">响应式</li>
+                        <li>PC端</li>
+                        <li>移动端</li>
+                    </ul>
+                </div>
+
+                <ul class="works-list">
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work14.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work14.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work14.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work14.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="works-list" style="display: none;">
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work04.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work04.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work04.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work04.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work04.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work04.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work04.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work04.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work04.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work04.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work04.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work04.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="works-list" style="display: none;">
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work06.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work06.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work06.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="works-list-title">
+                                <p>手表</p>
+                            </div>
+                            <img src="./images/work06.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <a class="button" id="button2" data-scroll-reveal="enter top after 1s"
+                    data-scroll-reveal-initialized="true"></a>
+            </div>
+        </div>
+    </article>
+
+    <article class="advantage ">
+        <div class="adv-title" data-scroll-reveal="enter top after .1s">
+            个人爱好
+            <p data-scroll-reveal="enter top after .3s">风乍起,合当奋意向人生。</p>
+        </div>
+    </article>
 
 
 </body>
@@ -168,7 +379,8 @@
 <script src="./js/swiper-bundle.min.js"></script>
 <!-- 更改滚动条 -->
 <script src="./js/jquery.nicescroll.js"></script>
-<!-- <script src="./js/wow.min.js"></script> wow 依赖animate.css -->
+<!--  wow 依赖animate.css -->
+<script src="./js/wow.min.js"></script>
 <!--scrollReveal和wow一样也是页面滚动动画，但是不依赖其他任何文件,可以播放一次或无数次!  -->
 <script src="http://cdn.dowebok.com/134/js/scrollReveal.js"></script>
 <script defer="defer" src="./js/home.js"></script>
