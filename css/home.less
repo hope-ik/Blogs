@@ -3,8 +3,21 @@
     padding: 0;
 }
 
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+body {
+    cursor: url("/images/dianji.png"),auto;
+}
+
 * {
     .container;
+
 }
 
 a {
@@ -17,11 +30,15 @@ ul {
     list-style: none;
 }
 
+#ascrail2000 {
+    z-index: 999 !important;
+}
+
 .button {
     display: block;
     height: 45px;
     width: 200px;
-    border: 1px solid #0003;
+    border: 1px solid #000000a6;
     margin: 200px auto 100px;
     color: #242424;
     line-height: 45px;
@@ -119,6 +136,7 @@ ul {
     overflow: hidden;
     z-index: 980;
     transition: all 1s;
+
     span {
         display: block;
         background: #fff;
@@ -632,7 +650,7 @@ ul {
             li {
                 position: relative;
                 display: inline-block;
-                width: 16.66666%;
+                width: 17.66666%;
                 overflow: hidden;
                 transition: all 1.1s;
 
@@ -693,7 +711,7 @@ ul {
     .adv-title {
         padding: 60px 0;
         text-align: center;
-        color: white;
+        color: rgb(255, 255, 255);
         background: #333;
         font-weight: bold;
         font-size: 24px;
@@ -705,5 +723,241 @@ ul {
         color: rgba(255, 255, 255, .8);
         font-weight: 100;
         line-height: 28px;
+    }
+
+    .adv-main {
+        overflow: hidden;
+
+        .adv-item {
+            width: 33.333%;
+            float: left;
+            background-size: cover;
+
+            i {
+                display: block;
+                width: 128px;
+                height: 128px;
+                text-align: center;
+                margin: 100px auto;
+                font-style: normal;
+            }
+
+            svg {
+                display: block;
+                font-size: 70px;
+                position: absolute;
+                left: 45%;
+                top: 0%;
+                opacity: .6;
+            }
+        }
+
+        .aff {
+            display: block;
+            line-height: 185px;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .adv-item:nth-child(1) {
+            background-image: url('../images/pexels-tranmautritam-251225.jpg');
+
+            i::after {
+                .aff;
+                content: "代码编程";
+                color: #212525;
+            }
+        }
+
+        .adv-item:nth-child(2) {
+            background-image: url('../images/kitten-1285341_1920.jpg');
+
+            i::after {
+                .aff;
+                content: "撸猫";
+                color: #e2d2b9;
+            }
+        }
+
+        .adv-item:nth-child(3) {
+            background-image: url('../images/v2-09d9a4b0086facc840c1ed2dad30b1e0_720w.jpg');
+
+            i::after {
+                .aff;
+                content: "动漫与影视";
+                color: #e99867;
+
+            }
+        }
+    }
+
+    .center-block {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        ul {
+            overflow: hidden;
+            margin: 100px 0 200px 0;
+
+            li:nth-child(1) i:hover {
+                color: white;
+                background-color: #ff5200;
+            }
+
+            li:nth-child(2) i:hover {
+                color: white;
+                background-color: #0abb0a;
+            }
+
+            li:nth-child(3) i:hover {
+                color: white;
+                background-color: #33aaff;
+            }
+
+            li:nth-child(4) i:hover {
+                color: white;
+                background-color: #4e22ff;
+            }
+
+            li {
+                float: left;
+                box-sizing: border-box;
+                padding: 0 10px;
+                text-align: center;
+                width: 25%;
+
+                i {
+                    font-size: 50px;
+                    display: block;
+                    width: 80px;
+                    height: 80px;
+                    margin: 0 auto;
+                    line-height: 80px;
+                    color: #666;
+                    cursor: pointer;
+                    font-weight: 400;
+                    border-radius: 50%;
+                    transition: all .6s;
+                }
+
+                h2 {
+                    color: #666;
+                    font-size: 20px;
+                }
+
+                p {
+                    color: #777;
+                    padding: 5px 20px;
+                    box-sizing: border-box;
+                    margin: 0 auto;
+                    text-align: center;
+                    letter-spacing: 1px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+}
+
+
+.partner {
+    z-index: 99;
+    position: relative;
+    overflow: hidden;
+    background-color: #335567;
+    padding: 200px 0 0;
+
+    .center-block {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .info-title {
+            text-align: center;
+            font-weight: 600;
+            font-size: 25px;
+            letter-spacing: 3px;
+            color: white;
+
+            @keyframes title-img {
+
+                0%,
+                100% {
+                    transform: translateY(15px);
+                }
+
+                50% {
+                    transform: translateY(0);
+                }
+            }
+
+            img {
+                width: 80px;
+                height: 80px;
+                display: block;
+                margin: 0 auto 40px;
+                animation: title-img 2s infinite linear;
+            }
+
+        }
+
+        hr {
+            display: block;
+            margin: 20px auto;
+            height: 2px;
+            background: #ccc;
+            width: 50px;
+            border: none;
+        }
+
+        .info-con {
+            text-align: center;
+        }
+
+        .button {
+            .button;
+            background: #ec7035;
+            font-weight: normal;
+            letter-spacing: normal;
+        }
+
+        .button::before {
+            content: "More";
+            .button-before;
+            color: white;
+        }
+
+        .button::after {
+            font-family: "iconfont" !important;
+            content: "\e64e";
+            display: block;
+            position: absolute;
+            top: -100%;
+            left: 0;
+            opacity: 0;
+            color: white;
+            font-size: 20px;
+            width: 100%;
+            height: 100%;
+            transition: all .3s;
+            font-size: 30px;
+        }
+
+        .button:hover {
+            background: #ec7035;
+            color: white;
+            border-radius: 50px;
+        }
+
+        .button:hover::before {
+            top: -100%;
+
+        }
+
+        .button:hover:after {
+            top: 0;
+            opacity: 1;
+        }
+
     }
 }

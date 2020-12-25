@@ -9,30 +9,19 @@
 window.onload = function () {
   $(".preloader").delay(1000).fadeOut("slow"); //一秒后缓慢隐没
 }; // // Menu Scroll to content and Active menu
-// $("a[href*=#]").bind("click", function (e) {
-//   e.preventDefault();
-//   var target = $(this).attr("href");
-//   $("html, body")
-//     .stop()
-//     .animate({ scrollTop: $(target).offset().top - 140 }, 1000, function () {});
-//   return false;
-// });
-// $("a[href*=#]").bind("click", function (e) {
-//     e.preventDefault();//取消事件默认行为
-//     console.log(e)
-// })
-// $(function () {
-//     
-// })
-// window.onscroll = function (e) {
-//     if (scrol >= 981) {
-//         console.log(1)
-//     } else {
-//         console.log(8)
-//     }
-// }
-//menu 
 
+
+$("a[href*=#]").bind("click", function (e) {
+  // console.log(e.currentTarget.href)
+  e.preventDefault(); //阻止默认行为
+
+  var target = $(this).attr("href"); //当前点击的href属性
+
+  $("html,body").stop().animate({
+    scrollTop: $(target).offset().top - 100
+  }, 1000, function () {});
+  return false;
+}); //menu 
 
 window.onscroll = function (e) {
   var scrol = document.documentElement.scrollTop;
@@ -85,43 +74,45 @@ $(function () {
 
 $('.works-list-tab li').click(function () {
   //siblings() 方法返回被选元素的所有同级元素。
-  $(this).addClass('act').siblings().removeClass('act'); //使用fadeout隐藏一组工作案例
+  $(this).addClass('act').siblings().removeClass('act'); //使用fadeout隐藏一组工作案例 slideUp
 
-  $("#case .works-list").fadeOut("fast"); //使用eq选择器选中当前点击的一组工作案例，使用fadeIn显示
+  $("#case .works-list").fadeOut("fast"); //使用eq选择器选中当前点击的一组工作案例，使用fadeIn显示 slideDown
 
   $("#case .works-list").eq($(this).index()).fadeIn("fast");
 }); // // niceScroll 滚动条
 
-$(function () {
-  $('html').niceScroll({
-    cursorcolor: "#f97352",
-    //滚动条的颜色
-    cursoropacitymax: 0.8,
-    //滚动条的透明度，从0-1   
-    touchbehavior: false,
-    //使光标拖动滚动像在台式电脑触摸设备 true滚动条拖动不可用  
-    cursorwidth: "6px",
-    //滚动条的宽度  单位默认px 
-    cursorborder: "0",
-    // 游标边框css定义    
-    cursorborderradius: "3px",
-    //滚动条两头的圆角   
-    autohidemode: false,
-    //是否隐藏滚动条  true的时候默认不显示滚动条，当鼠标经过的时候显示滚动条   
-    zindex: "auto",
-    //给滚动条设置z-index值    
-    spacebarenabled: true,
-    // 当按下空格时使页面向下滚动
-    railvalign: 'defaul',
-    railpadding: {
-      top: 0,
-      right: -6,
-      left: 0,
-      bottom: 0
-    } //滚动条的位置
+$('html').niceScroll({
+  cursorcolor: "#f97352",
+  //滚动条的颜色
+  cursoropacitymax: 0.8,
+  //滚动条的透明度，从0-1   
+  touchbehavior: false,
+  //使光标拖动滚动像在台式电脑触摸设备 true滚动条拖动不可用  
+  cursorwidth: "6px",
+  //滚动条的宽度  单位默认px 
+  cursorborder: "0",
+  // 游标边框css定义    
+  cursorborderradius: "3px",
+  //滚动条两头的圆角   
+  autohidemode: false,
+  //是否隐藏滚动条  true的时候默认不显示滚动条，当鼠标经过的时候显示滚动条   
+  zindex: "auto",
+  //给滚动条设置z-index值    
+  spacebarenabled: true,
+  // 当按下空格时使页面向下滚动
+  railvalign: 'defaul',
+  railpadding: {
+    top: 0,
+    right: -6,
+    left: 0,
+    bottom: 0
+  } //滚动条的位置
 
-  });
-}); // // Stick menu
+}); // $.fn.highlight1 = function () {
+//     this.css("color", "red")
+//     return this;
+// }
+// // Stick menu
 // $("nav").sticky({ topSpacing: 0 });
 // // var navH = $("nav").offset().top;
 // //  //滚动条事件
