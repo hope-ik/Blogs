@@ -8,14 +8,14 @@
     <meta name="keywords" content="Hope的个人网站">
     <meta name="author" content="黄泰彬,www.xxx.cn,2671589651@qq.com">
     <title>Hope的个人网站</title>
-    <link rel="ICON" href="logo.png">
-    <link rel="SHORTCUT ICON" href="logo.png">
+    <link rel="ICON" href="/logo.png">
+    <link rel="SHORTCUT ICON" href="/logo.png">
     <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/iconfont.css">
     <link rel="stylesheet" href="./css/home.css" rel="stylesheet">
     <script src="./js/iconfont.js"></script>
     <!--scrollReveal和wow一样也是页面滚动动画，但是不依赖其他任何文件,可以播放一次或无数次!  -->
-    <script src="http://cdn.dowebok.com/134/js/scrollReveal.js"></script>
+    <script src="/js/scrollReveal.js"></script>
     <script defer="defer" src="./js/home.js"></script>
     <!--loading style-->
     <!-- <link rel="stylesheet" href="css/loading.css"> -->
@@ -57,6 +57,9 @@
     </div>
 
     <div class="navigation">
+        <div class="nav-logo" data-scroll-reveal="enter left after 1s">
+            <img src="/logo.png" alt="logo" class="logo-animation">
+        </div>
         <ul data-scroll-reveal="enter left after 1s">
             <li>
                 <a href="#">博客</a>
@@ -71,7 +74,7 @@
                 <a href="#case">案例</a>
             </li>
             <li>
-                <a href="#">联系</a>
+                <a href="#contact">联系</a>
             </li>
         </ul>
     </div>
@@ -456,9 +459,72 @@
         </div>
     </article>
 
-    <article class="contact">
+    <article class="contact" id="contact">
+        <div class="center-block">
 
+            <div class="title">
+                <div class="inner">
+                    <h1 data-scroll-reveal="enter top after 0.1s">contact</h1>
+                    <h2 data-scroll-reveal="enter top after 0.1s">联系·我</h2>
+                    <hr class="line" data-scroll-reveal="enter left after 0.1s" />
+                    <p data-scroll-reveal="enter top after .1s">
+                        席不正，不坐
+                        <br />
+                        简单做人，认真做事
+                    </p>
+                </div>
+            </div>
+
+            <div class="center-con">
+                <img src="/images/erwm.png" alt="微信二维码" data-scroll-reveal="enter left after .3s">
+                <div class="center-message" data-scroll-reveal="enter right after .3s">
+                    <span>黄泰彬:</span>
+                    <span>E-mail:
+                        <br />
+                        huangtbin@foxmail.com
+                    </span>
+                    <span>微信/QQ:
+                        <br />
+                        2671589651
+                    </span>
+                </div>
+            </div>
+
+        </div>
     </article>
+
+    <footer>
+        <a href="#">
+            <img src="/logo.png" alt="">
+        </a>
+        <ul class="nav">
+            <li>
+                <a href="">博客</a>
+            </li>
+            <li>
+                <a href="">简历</a>
+            </li>
+            <li>
+                <a href="#about">关于</a>
+            </li>
+            <li>
+                <a href="#case">案例</a>
+            </li>
+            <li>
+                <a href="#contact">联系</a>
+            </li>
+        </ul>
+        <ul class="social">
+            <li class="iconfont">&#xe60d;</li>
+            <li class="iconfont">&#xe614;</li>
+            <li class="iconfont">&#xe615;</li>
+            <li class="iconfont">&#xe617;</li>
+            <li class="iconfont">&#xe616;</li>
+        </ul>
+        <div class="copyright">
+            <span class="author">©2020 Hope.All rights reserved.</span>
+        </div>
+    </footer>
 
 </body>
 <!-- JavaSript脚本 -->

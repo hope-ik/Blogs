@@ -84,7 +84,7 @@ ul {
 #part1 {
   height: 100vh;
   background-color: transparent;
-  background-image: url('../images/pexels-burst-374811.jpg');
+  background-image: url('../images/earth-1149733_1920.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -115,7 +115,7 @@ ul {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  z-index: 980;
+  z-index: 1002;
   transition: all 1s;
 }
 .menu-open span {
@@ -152,7 +152,27 @@ ul {
   background-color: #000000db;
   position: sticky;
   top: 0;
-  z-index: 800;
+  z-index: 1001;
+}
+.navigation .nav-logo {
+  position: absolute;
+  left: 15%;
+}
+.navigation .nav-logo .logo-animation {
+  width: 45px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .navigation .nav-logo .logo-animation {
+    animation: logo-rotate infinite 10s linear;
+  }
+}
+@keyframes logo-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .navigation ul {
   right: 15%;
@@ -165,6 +185,10 @@ ul {
   text-align: center;
   height: 100%;
   margin: 20px 20px;
+  transition: all 0.7s;
+}
+.navigation ul li a:hover {
+  color: #9a9a9a !important;
 }
 #case {
   background: #f7f7f7;
@@ -844,4 +868,136 @@ ul {
 .partner .center-block .button:hover:after {
   top: 0;
   opacity: 1;
+}
+.contact {
+  overflow: hidden;
+  position: relative;
+  padding: 100px 0;
+}
+.contact .center-block {
+  width: 90%;
+  position: relative;
+  margin: 0 auto;
+}
+.contact .center-block .title {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.contact .center-block .title .inner {
+  display: inline-block;
+  vertical-align: middle;
+}
+.contact .center-block .title .inner h1 {
+  font-size: 41px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  position: relative;
+  text-transform: uppercase;
+  color: #353535;
+  letter-spacing: 5px;
+}
+.contact .center-block .title .inner h2 {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 100;
+  color: #424242;
+  letter-spacing: 5px;
+}
+.contact .center-block .title .inner .line {
+  height: 2px;
+  border: none;
+  width: 45px;
+  background: #424242;
+  display: block;
+  margin: 25px auto 45px;
+}
+.contact .center-block .title .inner p {
+  color: #242424;
+  font-weight: lighter;
+  font-size: 14px;
+  letter-spacing: 3px;
+  line-height: 24px;
+  text-align: center;
+  padding: 0 10px;
+}
+.contact .center-block .center-con {
+  width: 400px;
+  margin: 40px auto 40px;
+  overflow: hidden;
+  text-align: center;
+  z-index: 999;
+}
+.contact .center-block .center-con img {
+  width: 170px;
+  height: 170px;
+  float: left;
+}
+.contact .center-block .center-con .center-message {
+  float: right;
+  padding: 10px 0px;
+}
+.contact .center-block .center-con .center-message span {
+  text-align: left;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 22px;
+}
+footer {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background: #353535;
+  overflow: hidden;
+}
+footer a {
+  margin-top: 45px;
+  display: block;
+}
+footer a img {
+  width: 60px;
+  margin: 0 auto;
+  display: block;
+  opacity: 0.7;
+}
+footer .nav {
+  text-align: center;
+}
+footer .nav li {
+  display: inline-block;
+  font-size: 15px;
+  padding: 10px 10px;
+  transition: all 0.7s;
+}
+footer .nav li a {
+  color: #929292;
+}
+footer .nav li:hover a {
+  color: white;
+}
+footer .social {
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+}
+footer .social li {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #929292;
+  font-size: 32px;
+  transition: all 0.7s;
+}
+footer .social li:hover {
+  color: white;
+}
+footer .copyright {
+  height: 55px;
+  background-color: #272727;
+  text-align: center;
+}
+footer .copyright .author {
+  color: #6f6f6f;
+  display: block;
+  padding: 20px 0;
+  font-size: 13px;
 }
